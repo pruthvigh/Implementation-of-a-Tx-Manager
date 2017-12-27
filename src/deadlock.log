@@ -1,0 +1,54 @@
+---------------------------------------------------------------
+TxId	Txtype	Operation	ObId:Obvalue:optime	LockType	Status		TxStatus
+T1	W 	BeginTx
+T2	W 	BeginTx
+T1	  	ReadTx   	 1:-1:277    	 ReadLock   	 Granted   	P
+T2	  	ReadTx   	 2:-1:235    	 ReadLock   	 Granted   	P
+T1	  	WriteTx   	 2:0:277    	 WriteLock   	 Granted   	P
+T2	  	WriteTx   	 1:0:235    	 WriteLock   	 Granted   	P
+
+T1	  	CommitTx 	 
+
+T2	  	CommitTx 	 
+---------------------------------------------------------------
+TxId	Txtype	Operation	ObId:Obvalue:optime	LockType	Status		TxStatus
+T1	W 	BeginTx
+T1	  	ReadTx   	 1:-1:277    	 ReadLock   	 Granted   	P
+T2	W 	BeginTx
+T1	  	WriteTx   	 2:1:277    	 WriteLock   	 Granted   	P
+T2	  	ReadTx   	 2:0:235    	 ReadLock   	 Granted   	P
+T2	  	WriteTx   	 1:0:235    	 WriteLock   	 Granted   	P
+
+T1	  	CommitTx 	 
+
+T2	  	CommitTx 	 
+---------------------------------------------------------------
+TxId	Txtype	Operation	ObId:Obvalue:optime	LockType	Status		TxStatus
+T2	W 	BeginTx
+T1	W 	BeginTx
+T1	  	ReadTx   	 1:-1:277    	 ReadLock   	 Granted   	P
+T2	  	ReadTx   	 2:-1:235    	 ReadLock   	 Granted   	P
+T1	  	WriteTx   	 2:0:277    	 WriteLock   	 Granted   	P
+
+T1	  	CommitTx 	 
+T2	  	WriteTx   	 1:0:235    	 WriteLock   	 Granted   	P
+
+T2	  	CommitTx 	 
+---------------------------------------------------------------
+TxId	Txtype	Operation	ObId:Obvalue:optime	LockType	Status		TxStatus
+T1	W 	BeginTx
+T2	W 	BeginTx
+T1	  	ReadTx   	 1:-1:277    	 ReadLock   	 Granted   	P
+T1	  	WriteTx   	 2:1:277    	 WriteLock   	 Granted   	P
+---------------------------------------------------------------
+TxId	Txtype	Operation	ObId:Obvalue:optime	LockType	Status		TxStatus
+T1	W 	BeginTx
+T2	W 	BeginTx
+T1	  	ReadTx   	 1:-1:277    	 ReadLock   	 Granted   	P
+T2	  	ReadTx   	 2:-1:235    	 ReadLock   	 Granted   	P
+T1	  	WriteTx   	 2:0:277    	 WriteLock   	 Granted   	P
+T2	  	WriteTx   	 1:0:235    	 WriteLock   	 Granted   	P
+
+T1	  	CommitTx 	 
+
+T2	  	CommitTx 	 
